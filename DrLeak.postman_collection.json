@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "c4bd059a-8699-445a-946e-f10c21739fae",
+		"name": "DrLeak",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"category_id\", jsonData.tree.children[1].id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/category/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"category",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retrieve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"category_id\", jsonData.tree.children[0].id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/category/{{category_id}}/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"category",
+						"{{category_id}}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/category/{{category_id}}/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"category",
+						"{{category_id}}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"category_id\", jsonData.tree.children[0].id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"parent_id\": 3,\n    \"data\": {\n        \"name\": \"MyName\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/category/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"category",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
