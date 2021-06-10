@@ -1,92 +1,86 @@
 [
 {
-  "model": "api.category",
+  "model": "api.node",
   "pk": 1,
   "fields": {
-    "path": "0001",
+    "path": "0004",
     "depth": 1,
     "numchild": 3,
-    "name": "Computer Hardware"
+    "name": "MyRoot",
+    "description": "MyDescription",
+    "type": ""
   }
 },
 {
-  "model": "api.category",
+  "model": "api.node",
   "pk": 2,
   "fields": {
-    "path": "00010003",
-    "depth": 2,
-    "numchild": 3,
-    "name": "Memory"
-  }
-},
-{
-  "model": "api.category",
-  "pk": 3,
-  "fields": {
-    "path": "00010001",
+    "path": "00040001",
     "depth": 2,
     "numchild": 2,
-    "name": "Hard Drives"
+    "name": "MyChild",
+    "description": "MyChild",
+    "type": "DATALOGGER"
   }
 },
 {
-  "model": "api.category",
+  "model": "api.node",
+  "pk": 3,
+  "fields": {
+    "path": "00040002",
+    "depth": 2,
+    "numchild": 1,
+    "name": "MyChild2",
+    "description": "MyChild2",
+    "type": "NODE"
+  }
+},
+{
+  "model": "api.node",
   "pk": 4,
   "fields": {
-    "path": "00010004",
-    "depth": 2,
+    "path": "000400010002",
+    "depth": 3,
     "numchild": 0,
-    "name": "SSD"
+    "name": "MyChildChild1",
+    "description": "MyChildChild1",
+    "type": "CELL"
   }
 },
 {
-  "model": "api.category",
+  "model": "api.node",
   "pk": 5,
   "fields": {
-    "path": "000100030001",
+    "path": "000400010004",
     "depth": 3,
     "numchild": 0,
-    "name": "Desktop Memory"
+    "name": "MyChildChild2",
+    "description": "MyChildChild2",
+    "type": "CELL"
   }
 },
 {
-  "model": "api.category",
+  "model": "api.node",
   "pk": 6,
   "fields": {
-    "path": "000100030002",
-    "depth": 3,
+    "path": "00040004",
+    "depth": 2,
     "numchild": 0,
-    "name": "Laptop Memory"
+    "name": "MyChild3",
+    "description": "MyChild3",
+    "type": "DATALOGGER"
   }
 },
 {
-  "model": "api.category",
+  "model": "api.node",
   "pk": 7,
   "fields": {
-    "path": "000100030003",
+    "path": "000400020002",
     "depth": 3,
     "numchild": 0,
-    "name": "Server Memory"
-  }
-},
-{
-  "model": "api.category",
-  "pk": 9,
-  "fields": {
-    "path": "000100010001",
-    "depth": 3,
-    "numchild": 0,
-    "name": "MyName"
-  }
-},
-{
-  "model": "api.category",
-  "pk": 10,
-  "fields": {
-    "path": "000100010002",
-    "depth": 3,
-    "numchild": 0,
-    "name": "MyName"
+    "name": "MyChildChild21",
+    "description": "MyChildChild21",
+    "type": "NODE"
   }
 }
 ]

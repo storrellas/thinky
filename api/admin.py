@@ -8,5 +8,6 @@ from .models import Node
 
 @admin.register(Node)
 class NodeAdmin(TreeAdmin):
-    pass
+    form = movenodeform_factory(Node)
+    
 
