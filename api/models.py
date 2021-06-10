@@ -12,7 +12,7 @@ class Node(MP_Node):
         (NODE, 'NODE')
     ]
 
-    #uuid = models.UUIDField( primary_key = True, default = uuid.uuid4, editable = False) 
+    uuid = models.UUIDField( primary_key = True, default = uuid.uuid4, editable = False) 
     name = models.CharField(max_length=30)
     description = models.CharField(max_length=30)
     type = models.CharField(max_length=10, choices=TYPE_CHOICES)

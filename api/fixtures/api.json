@@ -1,86 +1,87 @@
 [
-{
-  "model": "api.node",
-  "pk": 1,
-  "fields": {
-    "path": "0004",
-    "depth": 1,
-    "numchild": 3,
-    "name": "MyRoot",
-    "description": "MyDescription",
-    "type": ""
+  {
+    "model": "api.node",
+    "pk": "a2371eba-a37e-4151-9c5e-3b270886e21f",
+    "fields": {
+      "path": "0004",
+      "depth": 1,
+      "numchild": 3,
+      "name": "MyRoot",
+      "description": "MyDescription",
+      "type": ""
+    }
+  },
+  {
+    "model": "api.node",
+    "pk": "a2371eba-a37e-4151-9c5e-3b270886e31f",
+    "fields": {
+      "path": "00040001",
+      "depth": 2,
+      "numchild": 2,
+      "name": "MyChild",
+      "description": "MyChild",
+      "type": "DATALOGGER"
+    }
+  },
+  {
+    "model": "api.node",
+    "pk": "a2371eba-a37e-4151-945e-3b270886e21f",
+    "fields": {
+      "path": "00040002",
+      "depth": 2,
+      "numchild": 1,
+      "name": "MyChild2",
+      "description": "MyChild2",
+      "type": "NODE"
+    }
+  },
+  {
+    "model": "api.node",
+    "pk": "a2371eba-a37e-4251-9c5e-3b270886e21f",
+    "fields": {
+      "path": "000400010002",
+      "depth": 3,
+      "numchild": 0,
+      "name": "MyChildChild1",
+      "description": "MyChildChild1",
+      "type": "CELL"
+    }
+  },
+  {
+    "model": "api.node",
+    "pk": "a2371eba-a37e-4151-9d5e-3b2708826e21",
+    "fields": {
+      "path": "000400010004",
+      "depth": 3,
+      "numchild": 0,
+      "name": "MyChildChild2",
+      "description": "MyChildChild2",
+      "type": "CELL"
+    }
+  },
+  {
+    "model": "api.node",
+    "pk": "a2371eba-a37e-4151-9c5e-3b270886e21f",
+    "fields": {
+      "path": "00040004",
+      "depth": 2,
+      "numchild": 0,
+      "name": "MyChild3",
+      "description": "MyChild3",
+      "type": "DATALOGGER"
+    }
+  },
+  {
+    "model": "api.node",
+    "pk": "a2371eba-a37e-4651-9c5e-3b270886e21f",
+    "fields": {
+      "path": "000400020002",
+      "depth": 3,
+      "numchild": 0,
+      "name": "MyChildChild21",
+      "description": "MyChildChild21",
+      "type": "NODE"
+    }
   }
-},
-{
-  "model": "api.node",
-  "pk": 2,
-  "fields": {
-    "path": "00040001",
-    "depth": 2,
-    "numchild": 2,
-    "name": "MyChild",
-    "description": "MyChild",
-    "type": "DATALOGGER"
-  }
-},
-{
-  "model": "api.node",
-  "pk": 3,
-  "fields": {
-    "path": "00040002",
-    "depth": 2,
-    "numchild": 1,
-    "name": "MyChild2",
-    "description": "MyChild2",
-    "type": "NODE"
-  }
-},
-{
-  "model": "api.node",
-  "pk": 4,
-  "fields": {
-    "path": "000400010002",
-    "depth": 3,
-    "numchild": 0,
-    "name": "MyChildChild1",
-    "description": "MyChildChild1",
-    "type": "CELL"
-  }
-},
-{
-  "model": "api.node",
-  "pk": 5,
-  "fields": {
-    "path": "000400010004",
-    "depth": 3,
-    "numchild": 0,
-    "name": "MyChildChild2",
-    "description": "MyChildChild2",
-    "type": "CELL"
-  }
-},
-{
-  "model": "api.node",
-  "pk": 6,
-  "fields": {
-    "path": "00040004",
-    "depth": 2,
-    "numchild": 0,
-    "name": "MyChild3",
-    "description": "MyChild3",
-    "type": "DATALOGGER"
-  }
-},
-{
-  "model": "api.node",
-  "pk": 7,
-  "fields": {
-    "path": "000400020002",
-    "depth": 3,
-    "numchild": 0,
-    "name": "MyChildChild21",
-    "description": "MyChildChild21",
-    "type": "NODE"
-  }
-}
 ]
+  
