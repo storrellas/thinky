@@ -2,7 +2,7 @@ FROM node:10.14.2-alpine
 MAINTAINER Sergi Torrellas
 
 # Add dependencies
-RUN apk add --no-cache --update python3 bash build-base mariadb-dev python3-dev libffi-dev jpeg-dev
+RUN apk add --no-cache --update python3 bash build-base mariadb-dev python3-dev postgresql-dev libffi-dev jpeg-dev
 
 # Install dependencies
 ADD ./requirements.txt /repo/
@@ -20,4 +20,4 @@ WORKDIR /repo/
 EXPOSE 8000
 
 # Run container
-CMD gunicorn --access-logfile=- --bind 0.0.0.0:8080 thinky.wsgi
+CMD gunicorn --access-logfile=- --bind 0.0.0.0:8080 drleak.wsgi

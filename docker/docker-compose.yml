@@ -17,8 +17,8 @@
 
 version: "3"
 services:
-  thinky:
-    image: thinky
+  drleak:
+    image: drleak
     restart: always
     tty: true
     build:
