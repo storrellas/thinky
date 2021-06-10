@@ -1,7 +1,7 @@
 [
   {
     "model": "api.node",
-    "pk": "a2371eba-a37e-4151-9c5e-3b270886e21f",
+    "pk": "a2371eba-a37e-4151-9c5e-3b270882e21f",
     "fields": {
       "path": "0004",
       "depth": 1,
