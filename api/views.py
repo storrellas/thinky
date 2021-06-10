@@ -8,22 +8,41 @@ from rest_framework import status
 
 from django.contrib.auth.models import User
 
-from .models import Node
+from .models import Node, NodeAttribute
 
 from rest_framework import serializers
 
 
+class NodeAttributeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = NodeAttribute
+        fields = '__all__'
+
 
 class NodeSerializer(serializers.ModelSerializer):
+    node_attributes = NodeAttributeSerializer(many=True)
     class Meta:
         model = Node
-        fields = '__all__'
+        fields = ['name', 'description', 'node_attributes']
 
 class NodeList(APIView):
 
+    def serialize(self, node):
+      serializer_node = NodeSerializer(node)
+      children = []
+      for item in node.get_descendants():
+        #serializer_node = NodeSerializer(item)
+        children.append( self.serialize(item) )
+
+      return {'node': serializer_node.data, 'children': children}
+
     def get(self, request, format=None):
       root = Node.objects.get(depth=1)
-      return Response({'tree': Node.dump_bulk()[0]})
+      # print( "get_children ", root.get_children() )
+      # print( "get_descendants ", root.get_descendants() )
+      # print( "get_descendants ", self.serialize(root) )
+      return Response({'tree': self.serialize(root)})
+      #return Response({'tree': Node.dump_bulk()[0]})
 
     def post(self, request):
       parent = Node.objects.get(id=request.data['parent_id'])
