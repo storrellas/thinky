@@ -1,0 +1,92 @@
+[
+{
+  "model": "api.category",
+  "pk": 1,
+  "fields": {
+    "path": "0001",
+    "depth": 1,
+    "numchild": 3,
+    "name": "Computer Hardware"
+  }
+},
+{
+  "model": "api.category",
+  "pk": 2,
+  "fields": {
+    "path": "00010003",
+    "depth": 2,
+    "numchild": 3,
+    "name": "Memory"
+  }
+},
+{
+  "model": "api.category",
+  "pk": 3,
+  "fields": {
+    "path": "00010001",
+    "depth": 2,
+    "numchild": 2,
+    "name": "Hard Drives"
+  }
+},
+{
+  "model": "api.category",
+  "pk": 4,
+  "fields": {
+    "path": "00010004",
+    "depth": 2,
+    "numchild": 0,
+    "name": "SSD"
+  }
+},
+{
+  "model": "api.category",
+  "pk": 5,
+  "fields": {
+    "path": "000100030001",
+    "depth": 3,
+    "numchild": 0,
+    "name": "Desktop Memory"
+  }
+},
+{
+  "model": "api.category",
+  "pk": 6,
+  "fields": {
+    "path": "000100030002",
+    "depth": 3,
+    "numchild": 0,
+    "name": "Laptop Memory"
+  }
+},
+{
+  "model": "api.category",
+  "pk": 7,
+  "fields": {
+    "path": "000100030003",
+    "depth": 3,
+    "numchild": 0,
+    "name": "Server Memory"
+  }
+},
+{
+  "model": "api.category",
+  "pk": 9,
+  "fields": {
+    "path": "000100010001",
+    "depth": 3,
+    "numchild": 0,
+    "name": "MyName"
+  }
+},
+{
+  "model": "api.category",
+  "pk": 10,
+  "fields": {
+    "path": "000100010002",
+    "depth": 3,
+    "numchild": 0,
+    "name": "MyName"
+  }
+}
+]
