@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-n05)bcf0*cm*)_dzy1yzz3mnilifys%w5s@&om_1fs$e$o+sr0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'thinky.urls'
+ROOT_URLCONF = 'drleak.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'thinky.wsgi.application'
+WSGI_APPLICATION = 'drleak.wsgi.application'
 
 
 # Database
