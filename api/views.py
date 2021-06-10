@@ -8,56 +8,36 @@ from rest_framework import status
 
 from django.contrib.auth.models import User
 
-from .models import Category
+from .models import Node
 
 from rest_framework import serializers
 
 
 
-class CategorySerializer(serializers.ModelSerializer):
+class NodeSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Category
+        model = Node
         fields = '__all__'
 
-class CategoryList(APIView):
-    """
-    View to list all users in the system.
+class NodeList(APIView):
 
-    * Requires token authentication.
-    * Only admin users are able to access this view.
-    """
     def get(self, request, format=None):
-      """
-      Return a list of all categories.
-      """
-      root = Category.objects.get(depth=1)
-      return Response({'tree': Category.dump_bulk()[0]})
+      root = Node.objects.get(depth=1)
+      return Response({'tree': Node.dump_bulk()[0]})
 
     def post(self, request):
-
-      parent = Category.objects.get(id=request.data['parent_id'])
-      category = Category(name=request.data['data']['name'])
-      parent.add_child(instance=category)
-      serializer = CategorySerializer(category)
+      parent = Node.objects.get(id=request.data['parent_id'])
+      instance = Node(name=request.data['data']['name'])
+      parent.add_child(instance=instance)
+      serializer = NodeSerializer(node)
       return Response({'message': serializer.data})
 
-class CategoryDetail(APIView):
-    """
-    View to list all users in the system.
+class NodeDetail(APIView):
 
-    * Requires token authentication.
-    * Only admin users are able to access this view.
-    """
     def get(self, request, pk, format=None):
-      """
-      Return a list of all categories.
-      """
-      item = Category.objects.get(id=pk)
-      return Response({'tree': Category.dump_bulk(item)[0]})
+      item = Node.objects.get(id=pk)
+      return Response({'tree': Node.dump_bulk(item)[0]})
 
     def delete(self, request, pk, format=None):
-      """
-      Return a list of all categories.
-      """
-      Category.objects.get(id=pk).delete()
+      Node.objects.get(id=pk).delete()
       return Response(status=status.HTTP_204_NO_CONTENT) 

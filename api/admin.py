@@ -4,9 +4,9 @@ from django.contrib import admin
 from django.contrib import admin
 from treebeard.admin import TreeAdmin
 from treebeard.forms import movenodeform_factory
-from .models import Category
+from .models import Node
 
-class CategoryAdmin(TreeAdmin):
-    form = movenodeform_factory(Category)
+@admin.register(Node)
+class NodeAdmin(TreeAdmin):
+    pass
 
-admin.site.register(Category, CategoryAdmin)
